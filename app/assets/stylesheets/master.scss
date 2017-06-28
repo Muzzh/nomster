@@ -4,20 +4,9 @@ h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
-
-
-
-
-.featured-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 20px;
+body {
+  background: image_url('xv.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
 .feat-box {
@@ -36,4 +25,26 @@ h1, h2, h3 {
   transition: box-shadow .3s ease;
   margin-top: 10px;
   margin-bottom: 15px;
+}
+.navbar {
+  background: image_url('cartographer.png');
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+.navbar::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+.navbar:hover {
+  transform: scale(1, 1.1);
+}
+.navbar:hover::after {
+  opacity: 1;
 }
