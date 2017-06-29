@@ -1,4 +1,5 @@
 @import "bootstrap";
+/* @import url('https://fonts.googleapis.com/css?family=Philosopher'); */
 
 h1, h2, h3 {
   margin: 0;
@@ -30,6 +31,8 @@ body {
   background: image_url('cartographer.png');
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 .navbar::after {
   content: '';
@@ -47,4 +50,11 @@ body {
 }
 .navbar:hover::after {
   opacity: 1;
+}
+.navbar-inverse .navbar-brand {
+  color: #F2340A;
+  font-family: 'rechtmanplain';
+  font-size: 300%;
+  font-weight: 550;
+  letter-spacing: -0.3px;
 }
