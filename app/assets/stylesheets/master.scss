@@ -11,23 +11,6 @@ body {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
-.feat-box {
-  border-radius: 5px;
-  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
-  text-align: center;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-/*  display: flex; */
-  transition: box-shadow .3s ease;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
 .navbar {
   background: image_url('cartographer.png');
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
@@ -60,6 +43,43 @@ body {
   font-size: 300%;
   font-weight: 550;
   letter-spacing: -0.3px;
+}
+.feat-box {
+  border-radius: 5px;
+  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+/*  display: flex; */
+  transition: box-shadow .3s ease;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.sign-box {
+  border-radius: 5px;
+  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+/*  display: flex; */
+  transition: box-shadow .3s ease;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.form-actions {
+  text-align: right;
 }
 .paginate_container {
   background: image_url('cartographer.png');
