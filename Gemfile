@@ -61,6 +61,9 @@ gem 'simple_form'
 # font awesome gem
 gem 'font-awesome-rails'
 
+# devise gem https://github.com/plataformatec/devise
+gem 'devise'
+
 # will_paginate gem https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 
