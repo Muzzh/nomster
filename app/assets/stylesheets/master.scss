@@ -87,6 +87,12 @@ body {
 .pass-reset {
   text-align: center;
 }
+.error { /*notice for wrong user entry */
+  color: #ff3333;
+  background-color: #999999;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
 .paginate_container {
   background: image_url('cartographer.png');
 }
