@@ -78,8 +78,14 @@ body {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+.form-inputs {
+  text-align: left;
+}
 .form-actions {
   text-align: right;
+}
+.pass-reset {
+  text-align: center;
 }
 .paginate_container {
   background: image_url('cartographer.png');
