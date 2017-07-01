@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :require_permission, only: :edit
   
   def index
     @places = Place.page(params[:page]).per_page(5)
@@ -10,7 +11,6 @@ class PlacesController < ApplicationController
   end
 
   def create
-
     current_user.places.create(place_params)
     redirect_to root_path
   end
@@ -19,6 +19,17 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
+  def edit
+    @place = Place.find(params[:id])
+  end
+
+
+
+  def require_permission
+    if current_user != Place.find(params[:id]).user
+      redirect_to root_path
+    end
+  end
 
 
 

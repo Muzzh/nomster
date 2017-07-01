@@ -7,4 +7,8 @@
   <% if @place.user.present? %>
   <small>Contact: <%= @place.user.email %></small>
   <% end %>
-  </div>
+  <br />
+  <% if current_user == Place.find(params[:id]).user %>
+    <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-danger' %>
+  <% end %>
+</div>
