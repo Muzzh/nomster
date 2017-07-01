@@ -1,7 +1,7 @@
 
 <% @places.each do |place| %>
   <div class="feat-box col-10 offset-1"> 
-    <h1><%= place.name %></h1>
+    <h1><%= link_to place.name, place_path(place) %></h1>
     <h2><%= place.occurence %></h2>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />

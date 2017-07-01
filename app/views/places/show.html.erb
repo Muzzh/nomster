@@ -1,0 +1,10 @@
+<div class="feat-box col-10 offset-1">
+  <h1><%= @place.name %></h1>
+  <h2><%= @place.occurence %></h2>
+  <i><%= @place.address %></i><br /><br />
+  <p><%= @place.description %></p><br />
+
+  <% if @place.user.present? %>
+  <small>Contact: <%= @place.user.email %></small>
+  <% end %>
+  </div>
