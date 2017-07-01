@@ -6,6 +6,7 @@
     <%= f.input :address %>
     <%= f.input :description %>
     <br />
-    <%= f.submit 'Update', class: 'btn btn-danger' %>
+    <%= f.submit 'Update', class: 'btn btn-warning' %>
+    <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you CERTAIN you want to DELETE this entry?'},class: 'btn btn-danger' %>
   <% end %>
 </div>
