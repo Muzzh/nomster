@@ -5,7 +5,7 @@
   <p><%= @place.description %></p><br />
 
   <% if @place.user.present? %>
-  <small>Contact: <%= @place.user.email %></small>
+  <small>Added by: <%= @place.user.username %> &nbsp&nbsp Contact: <%= @place.user.email %></small>
   <% end %>
   <br />
   <% if current_user && current_user == @place.user %>
