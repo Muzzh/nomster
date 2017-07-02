@@ -67,6 +67,12 @@ gem 'devise'
 # will_paginate gem https://github.com/mislav/will_paginate
 gem 'will_paginate', '~> 3.0'
 
+# Figaro to access environment variable
+gem 'figaro'
+
+### Section for map integration ###
+gem 'geocoder'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
