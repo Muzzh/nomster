@@ -4,6 +4,32 @@
   <i><%= @place.address %></i><br /><br />
   <p><%= @place.description %></p><br />
 
+  <% if @place.latitude.present? && @place.longitude.present? %>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHinkeGiAtyVR6hII-rg4yF4OBQj7b9y0&callback=initMap">
+    </script>
+
+    <div id="map"></div>
+  <% end %>
+  <br />
+  
   <% if @place.user.present? %>
   <small>Added by: <%= @place.user.username %> &nbsp&nbsp Contact: <%= @place.user.email %></small>
   <% end %>
