@@ -39,12 +39,16 @@
   <% end %>
 </div>
 
-<h1>Comments</h1>
+<div class="col-10 offset-1">  
+  <h1 class="float-left">Comments</h1>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
-  Add a comment for <%= @place.name %>
-</button>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-warning btn-lg float-right" data-toggle="modal" data-target="#myModal">
+    Add a comment for <%= @place.name %>
+  </button>
+</div>
+
+<div class="clear"></div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,16 +74,18 @@
   </div>
 </div>
 
-<% @place.comments.each do |comment| %>
-  <div>
-    <blockquote>
-      <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
-      <% end %>
-      <%= comment.message %>
-      <small>by <%= comment.user.username %></small>
-    </blockquote>
-  </div>
-<% end %>
+<div class="row">
+  <% @place.comments.each do |comment| %>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <blockquote class="comment-box">
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small>by <%= comment.user.username %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
 
 <div class="clear"></div>

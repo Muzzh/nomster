@@ -10,6 +10,26 @@ body {
   background: image_url('xv.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
 
 .navbar {
   background: image_url('cartographer.png');
@@ -81,6 +101,23 @@ body {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+.comment-box {
+  border-radius: 5px;
+  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+/*  display: flex; */
+  transition: box-shadow .3s ease;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
 .form-inputs {
   text-align: left;
 }
@@ -96,6 +133,7 @@ body {
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
 }
+
 .paginate_container {
   background: image_url('cartographer.png');
 }
