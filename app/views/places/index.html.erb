@@ -9,6 +9,17 @@
     <% if place.user.present? %>
       <small>Added by: <%= place.user.username %> &nbsp&nbsp Contact: <%= place.user.email %></small>
     <% end %>
+    <%if place.comments.present? %>
+      <div class="col-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %><br />
+          <small>by <%= place.comments.last.user.username %></small>
+        </blockquote>
+      </div>
+    <% end %>
   </div>
   <br />
 
