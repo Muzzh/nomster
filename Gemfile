@@ -70,8 +70,14 @@ gem 'will_paginate', '~> 3.0'
 # Figaro to access environment variable
 gem 'figaro'
 
-### Section for map integration ###
+# map integration #
 gem 'geocoder'
+
+# CarrierWave https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave', '~>1.0'
+
+# Amazon S3 link to CarrierWave
+gem 'fog-aws'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

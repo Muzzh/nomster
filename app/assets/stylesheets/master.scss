@@ -118,6 +118,14 @@ blockquote p {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+.photo-box {
+  background: #FFFFFF;
+  height: 150px;
+}
+.pic-container img {
+  max-height: 150px;
+  max-width: 150px;
+}
 .form-inputs {
   text-align: left;
 }
@@ -192,5 +200,7 @@ blockquote p {
     overflow: hidden; }
 
 #map {
-  height: 300px;
+  margin-top: 0;
+  padding-top: 0;
+  height: 250px;
 }
