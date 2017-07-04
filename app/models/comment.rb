@@ -3,6 +3,8 @@ class Comment < ApplicationRecord
   belongs_to :place
   after_create :send_comment_email
 
+  validates :message, presence: true
+
   RATINGS = {
     'one star': '1_star',
     'two stars': '2_stars',
