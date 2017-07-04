@@ -35,22 +35,24 @@
     </button>
   </div>
   <div class="clear"></div><br />
-  <div class="photo-box">
-    <div>
-      <div class="row">
-        <% @place.photos.each do |photo| %>
-          <div class="col-4">
-            <div class="pic-container">
-              <%= image_tag photo.picture, class: "picture-display"%>
+  <% if @place.photos.last.present? %>
+    <div class="photo-box">
+      <div>
+        <div class="row">
+          <% @place.photos.each do |photo| %>
+            <div class="col-4">
+              <div class="pic-container">
+                <%= image_tag photo.picture, class: "picture-display"%>
+              </div>
+              <%= photo.caption %><br />
+              <small>Submitted by <%= photo.user.username %></small>
             </div>
-            <%= photo.caption %><br />
-            <small>Submitted by <%= photo.user.username %></small>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
+        <div class="clear"></div>
       </div>
-      <div class="clear"></div>
     </div>
-  </div>
+  <% end %>
   <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -128,7 +130,7 @@
             <b><%= comment.humanized_rating %></b> -
           <% end %>
           <%= comment.message %><br />
-          <small>by <%= comment.user.username %></small>
+          <small>- <%= comment.user.username %></small>
         </blockquote>
       </div>
     <% end %>
