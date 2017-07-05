@@ -67,6 +67,27 @@ blockquote p {
 .clear {
   clear: both;
 }
+div.carousel-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-item {
+  height: 300px;
+}
+.carousel .slide {
+  max-height: 300px;
+  min-height: 300px;
+  max-width: 1000px;
+  min-width: 800px;
+  overflow: hidden;
+}
+.carousel-inner {
+  height: 300px;
+  width: 1000px;
+  top: 50%;
+  left: 50%;
+  margin-left: -500px;
+}
 .feat-box {
   border-radius: 5px;
   -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
