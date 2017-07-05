@@ -1,5 +1,5 @@
 @import "bootstrap";
-/* @import url('https://fonts.googleapis.com/css?family=Philosopher'); */
+/*@import url('https://fonts.googleapis.com/css?family=Philosopher');*/
 @import "font-awesome";
 
 h1, h2, h3 {
@@ -36,7 +36,7 @@ blockquote p {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .navbar::after {
   /* background: image_url('cartographer.png'); */
@@ -87,6 +87,13 @@ div.carousel-wrapper {
   top: 50%;
   left: 50%;
   margin-left: -500px;
+}
+.carousel-caption {
+  font-family: 'rechtmanplain';
+  font-weight: bold;
+  font-size: 200%;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .feat-box {
   border-radius: 5px;
