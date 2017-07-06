@@ -20,7 +20,7 @@
 <div class="row">  
   <% @user.comments.each do |comment| %>
     <div class="col-10 col-sm-6 col-lg-4">
-      <h2 class="text-center underlined"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+      <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
       <blockquote>
         <% if comment.humanized_rating.present? %>
           <b><%= comment.humanized_rating %></b> -
@@ -31,3 +31,34 @@
     </div>  
   <% end %>
 </div>
+<div class="clear"></div>
+
+<br />
+<h2 class="text-center">My Places</h2>
+<br />
+<% @user.places.each do |place| %>
+    <div class="feat-box col-10 offset-1"> 
+    <h1><%= link_to place.name, place_path(place) %></h1>
+    <h2><%= place.occurence %></h2>
+    <i><%= place.address %></i><br /><br />
+    <p><%= place.description %></p><br />
+
+    <% if place.user.present? %>
+      <small>Added by: <%= place.user.username %> &nbsp&nbsp Contact: <%= place.user.email %></small>
+    <% end %>
+    <%if place.comments.present? %>
+      <div class="col-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %><br />
+          <small>by <%= place.comments.last.user.username %></small>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
+  <br />
+
+  </div>
+<% end %>
