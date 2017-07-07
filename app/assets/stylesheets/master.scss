@@ -17,7 +17,6 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -26,9 +25,19 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-
 blockquote p {
   display: inline;
+}
+label {
+  width: 150px;
+  text-align: left;
+}
+textarea {
+  width: 200px;
+  vertical-align: bottom;
+}
+input {
+  width: 200px
 }
 
 .navbar {
@@ -70,6 +79,7 @@ blockquote p {
 div.carousel-wrapper {
   margin-left: auto;
   margin-right: auto;
+  max-width: 1050px;
 }
 .carousel-item {
   height: 300px;
@@ -88,10 +98,9 @@ div.carousel-wrapper {
   left: 50%;
   margin-left: -500px;
 }
-.carousel-caption {
+.carousel-caption, .carousel-caption h3 {
   font-family: 'rechtmanplain';
-  font-weight: bold;
-  font-size: 200%;
+  font-size: 170%;
   text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -124,7 +133,6 @@ div.carousel-wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-/*  display: flex; */
   transition: box-shadow .3s ease;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -141,7 +149,6 @@ div.carousel-wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-/*  display: flex; */
   transition: box-shadow .3s ease;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -154,8 +161,12 @@ div.carousel-wrapper {
   max-height: 150px;
   max-width: 150px;
 }
-.form-inputs {
+.rememb-check {
+  width: 350px;
   text-align: left;
+}
+.input {
+  vertical-align: center;
 }
 .form-actions {
   text-align: right;

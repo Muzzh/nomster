@@ -6,7 +6,7 @@
       <%= f.input :email, required: false, autofocus: true %>
       <%= f.input :password, required: false %>
       <br />
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= f.input :remember_me, as: (:boolean if devise_mapping.rememberable?), :label_html => {class: "rememb-check"} %>
     </div>
     <div class="form-actions">
       <%= f.button :submit, "Log in", class: 'btn btn-warning' %>

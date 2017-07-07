@@ -1,7 +1,7 @@
 <div class="feat-box col-10 offset-1">
   <h1>Enter Your Place Details</h1>
   <%= simple_form_for @place do |f| %>
-    <%= f.input :name %>
+    <%= f.input :name, autofocus: true %>
     <%= f.input :occurence %>
     <%= f.input :address %>
     <%= f.input :description %>
