@@ -6,9 +6,9 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
-      <%= f.input :username, required: true %>
-      <%= f.input :password, required: true %>
+      <%= f.input :email, required: true, autofocus: true, placeholder: "Enter valid email address" %>
+      <%= f.input :username, required: true, uniqueness: true %>
+      <%= f.input :password, required: true, placeholder: "8 characters minimum" %>
       <%= f.input :password_confirmation, required: true %>
     </div>
     <br />
