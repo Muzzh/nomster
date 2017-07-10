@@ -40,12 +40,12 @@
       <div>
         <div class="row">
           <% @place.photos.each do |photo| %>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4">
               <div class="pic-container">
                 <%= image_tag photo.picture, class: "picture-display"%>
               </div>
-              <%= photo.caption %><br />
-              <small>Submitted by <%= photo.user.username %></small>
+              <p class="photo-caption"><%= photo.caption %><br /></p>
+              <p class="photo-user">Submitted by <%= photo.user.username %></p>
             </div>
           <% end %>
         </div>
@@ -54,27 +54,29 @@
     </div>
   <% end %>
   <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a photo for <%= @place.name %></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add a photo for <%= @place.name %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div>
+          <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+            <div class="modal-body">
+              <%= f.input :caption %>
+              <%= f.input :picture %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%= f.submit "Submit your photo!", class: 'btn btn-warning' %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <div class="modal-body">
-          <%= f.input :caption %>
-          <%= f.input :picture %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Submit your photo!", class: 'btn btn-warning' %>
-        </div>
-      <% end %>
     </div>
   </div>
-</div>
   
   <% if @place.user.present? %>
   <small>Added by: <%= @place.user.username %> &nbsp&nbsp Contact: <%= @place.user.email %></small>

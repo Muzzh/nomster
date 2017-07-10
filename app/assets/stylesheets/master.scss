@@ -155,11 +155,19 @@ div.carousel-wrapper {
 }
 .photo-box {
   background: #FFFFFF;
-  height: 150px;
+  min-height: 150px;
 }
 .pic-container img {
   max-height: 150px;
   max-width: 150px;
+}
+.photo-caption, .photo-caption p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.photo-user, .photo-user p {
+  font-size: 10px;
+  margin-bottom: 0;
 }
 .rememb-check {
   width: 350px;
