@@ -81,10 +81,10 @@ div.carousel-wrapper {
   margin-right: auto;
   max-width: 1050px;
 }
-.carousel-item {
-  height: 300px;
+.carousel-item img {
+  object-fit: contain;
 }
-.carousel .slide {
+/*.carousel .slide {
   max-height: 300px;
   min-height: 300px;
   max-width: 1000px;
@@ -92,12 +92,12 @@ div.carousel-wrapper {
   overflow: hidden;
 }
 .carousel-inner {
-  height: 300px;
-  width: 1000px;
+  height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
   margin-left: -500px;
-}
+}*/
 .carousel-caption, .carousel-caption h3 {
   font-family: 'rechtmanplain';
   font-size: 170%;
