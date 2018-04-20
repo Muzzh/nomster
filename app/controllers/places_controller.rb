@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
   before_action :require_permission, only: [:edit, :update, :destroy]
   
   def index
-    @places = Place.page(params[:page]).per_page(5)
+    @places = Place.order("created_at DESC").page(params[:page]).per_page(5)
   end
 
   def new
